@@ -7,4 +7,5 @@ tibooks-maker is customized Re:VIEW-platform for Think IT
  * TeX Live
  * Fontset
 
-special thanks @munepi
+ Copyright ©2015 Impress Corporation, An impress Group Company. All rights reserved.<br>
+ special thanks @munepi (Green Cherry Ltd.)
