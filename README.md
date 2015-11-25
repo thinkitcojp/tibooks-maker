@@ -6,3 +6,5 @@ tibooks-maker is customized Re:VIEW-platform for Think IT
  * Ruby
  * TeX Live
  * Fontset
+
+special thanks @munepi
