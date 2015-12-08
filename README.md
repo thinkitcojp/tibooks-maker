@@ -1,5 +1,5 @@
 # tibooks-maker
-tibooks-maker is customized Re:VIEW-platform for Think IT
+tibooks-maker is customized Re:VIEW-platform for [Think IT Books](https://thinkit.co.jp/tibooks,Think IT Books)
 
 * OS X apps (all in one package)
  * Re:VIEW
@@ -9,6 +9,12 @@ tibooks-maker is customized Re:VIEW-platform for Think IT
 
  Copyright ©2015 Impress Corporation, An Impress Group Company. All rights reserved.<br>
  special thanks Munehiro Yamamoto (Green Cherry Ltd.)
+
+## Installing
+
+Download the latest Version.
+
+https://github.com/suzukin/tibooks-maker/releases
 
 ## Getting Started
 
