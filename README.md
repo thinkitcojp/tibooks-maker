@@ -30,6 +30,7 @@ https://github.com/suzukin/tibooks-maker/releases
     [tibooks-maker]:~ $ 
     ```
 1. `review-pdfmaker`, `review-epubmaker` コマンドを試します。
+
    ```bash
    [tibooks-maker]:~ $ review-pdfmaker --help
    Usage: review-pdfmaker configfile
@@ -41,3 +42,4 @@ https://github.com/suzukin/tibooks-maker/releases
    --help                       Prints this message and quit.
    [tibooks-maker]:~ $ 
    ```
+
