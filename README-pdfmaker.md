@@ -142,8 +142,16 @@ http://www.latex-cmd.com/
 
 コマンドでTeX→PDFに変換します。
 
-### グレースケール画像を一括で変換する
+### ImageMagickで画像を変換する
+
+グレースケール画像を一括で変換する
 
 `mogrify -type Grayscale *.*`
 
+epsに一括で変換する
+
 `mogrify -format eps *.*`
+
+画像に枠を付ける（太さや色はお好みで）
+
+`mogrify -border 2x3 -bordercolor black *.*`
