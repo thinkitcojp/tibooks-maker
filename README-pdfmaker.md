@@ -154,4 +154,4 @@ epsに一括で変換する
 
 画像に枠を付ける（太さや色はお好みで）
 
-`mogrify -border 2x3 -bordercolor black *.*`
+`mogrify -border 1x1 -bordercolor black *.*`
