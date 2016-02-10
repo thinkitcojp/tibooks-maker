@@ -144,14 +144,19 @@ http://www.latex-cmd.com/
 
 ### ImageMagickで画像を変換する
 
-グレースケール画像を一括で変換する
+※mogrifyにするとフォルダー内の全画像に一括適用されます
 
+グレースケール画像を変換する
+
+`convert a.jpg -type Grayscale b.jpg`
 `mogrify -type Grayscale *.*`
 
-epsに一括で変換する
+epsに変換する
 
+`convert a.jpg a.eps`
 `mogrify -format eps *.*`
 
 画像に枠を付ける（太さや色はお好みで）
 
+`convert -border 1x1 -bordercolor black a.jpg a_waku.jpg`
 `mogrify -border 1x1 -bordercolor black *.*`
