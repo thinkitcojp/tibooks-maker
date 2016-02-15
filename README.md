@@ -1,19 +1,6 @@
 # 注意事項
 
-v1.0およびv1.0-RC1で、同梱されているRe:VIEW1.7.1に起因するバグ（listのキャプションが表示されない）が報告されています。
-https://github.com/kmuto/review/commit/89fc75732e5527bc6ddf1d738379f7decf85cf64
-
-`/Applications/tibooks-maker/lib/ruby/gems/2.2.0/gems/review-1.7.1/lib/review`
-
-にある latexbuilder.rb の265行目を
-
-`        common_code_block(id, lines, 'reviewlist', nil, lang) do |line, idx|`
-
-から
-
-`        common_code_block(id, lines, 'reviewlist', caption, lang) do |line, idx|`
-
-に修正して保存しておきましょう。
+tibooks-makerによって生成されるPDFが、印刷環境によってフォントがうまく設定されない現象が確認できています。その場合は、AcrobatでいったんPSファイル（.ps）として保存した後にAcrobat Distillerで「X/1a」に準拠したPDFを生成し直す必要があります。
 
 # tibooks-maker
 tibooks-maker is customized Re:VIEW-platform for [Think IT Books](https://thinkit.co.jp/tibooks,Think IT Books)
