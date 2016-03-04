@@ -160,3 +160,10 @@ epsに変換する
 
 `convert -border 1x1 -bordercolor black a.jpg a_waku.jpg`
 `mogrify -border 1x1 -bordercolor black *.*`
+
+### 表のセルサイズ（横幅）を手動で調整する
+
+tableタグの直前にtsizeで指定します、列数と合わせるようにします。単位は確かmmです。
+
+`//tsize[|latex|20,45,75]`
+`//table[table01][]{`
