@@ -1,15 +1,13 @@
-# 注意事項
+# What's this?
+"tibooks-maker" is easy publishing for pBooks & eBooks.
+customized Re:VIEW-platform for [Think IT Books](https://thinkit.co.jp/tibooks,Think IT Books)
 
-tibooks-makerによって生成されるPDFが、印刷環境によってフォントがうまく設定されない現象が確認できています。その場合は、AcrobatでいったんPSファイル（.ps）として保存した後にAcrobat Distillerで「X/1a」に準拠したPDFを生成し直す必要があります。
-
-# tibooks-maker
-tibooks-maker is customized Re:VIEW-platform for [Think IT Books](https://thinkit.co.jp/tibooks,Think IT Books)
-
-* OS X apps (all in one package)
+* tibooks-maker is OS X apps (all in one package) constructed from the following components:
  * Re:VIEW
  * Ruby
  * TeX Live
- * Fontset
+  * uplatex
+  * dvipdfmx
 
  Copyright ©2015 Impress Corporation, An Impress Group Company. All rights reserved.<br>
  special thanks Munehiro Yamamoto (Green Cherry Ltd.)
@@ -22,28 +20,22 @@ https://github.com/suzukin/tibooks-maker/releases
 
 ## Getting Started
 
-1. `tibooks-maker-1.0.dmg` から `tibooks-maker` フォルダを `/Applications/` フォルダへ差し替えコピーします。
+1. `tibooks-maker-1.x.dmg` を開き `tibooks-maker` フォルダを `/Applications/` フォルダへコピーします。
 1. ターミナル `Terminal.app` を起動して、
-   `. /Applications/tibooks-maker/setup.sh` を実行すると、
-   `tibooks-maker` の環境に切り替わります。
+   `. /Applications/tibooks-maker/setup.sh` を実行すると、プロンプトが、
+   `tibooks-maker` 環境に切り替わります。
     ```bash
     $ . /Applications/tibooks-maker/setup.sh
-     
-    tibook-maker 1.0 (Cherry)
-     
-    [tibooks-maker]:~ $ 
+
+		tibook-maker 1.1 (Cherry)
+
+		This is constructed from the following components:
+		 * Re:VIEW:	review (1.7.2)
+		 * Ruby:	ruby 2.3.0p0 (2015-12-25 revision 53290) [x86_64-darwin15]
+		 * TeX Live
+		   * uplatex:	e-upTeX 3.14159265-p3.6-u1.20-141210-2.6 (utf8.uptex) (TeX Live 2015)
+		   * dvipdfmx:	dvipdfmx Version 20150315
+
+    [tibooks-maker]:~ $
     ```
-1. `review-pdfmaker`, `review-epubmaker` コマンドを試します。
-
-   ```bash
-   [tibooks-maker]:~ $ review-pdfmaker --help
-   Usage: review-pdfmaker configfile
-   --help                       Prints this message and quit.
-   --[no-]debug                 Keep temporary files.
-   --ignore-errors              Ignore review-compile errors.
-   [tibooks-maker]:~ $ review-epubmaker --help
-   Usage: review-epubmaker [options] YAML_filename [export_filename]
-   --help                       Prints this message and quit.
-   [tibooks-maker]:~ $ 
-   ```
-
+1. tibooks-makerリポジトリをクローンしたら、 `gmake book.pdf`, `gmake book.epub` コマンドを試してみましょう。
