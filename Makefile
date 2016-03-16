@@ -2,7 +2,7 @@ BUNDLEEXEC=
 __epubmaker=${BUNDLEEXEC} review-epubmaker
 __pdfmaker=${BUNDLEEXEC} review-pdfmaker
 
-all: book.epub book.pdf
+all: book.epub book.pdf book-sp.pdf
 
 # book.epub: 電子書籍用EPUB（カラー画像）
 book.epub: clean

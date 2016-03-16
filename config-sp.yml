@@ -1,6 +1,6 @@
 # book-sp.pdf: 京葉SPおよびAmazonPOD用PDF（グレースケール画像、印刷用リンクなし、仕上がりサイズ）
 
-texdocumentclass: ["thinkit-books", "pdf:kanjimap=morisawa, cameraready=print, backmatter:break-before=page,"]
+texdocumentclass: ["thinkit-books", "pdf:kanjimap=hiragino, cameraready=print, backmatter:break-before=page,"]
 #   hanmen, % draft,
 #   % hanmengrid,
 #   % tombo, % mentuke,

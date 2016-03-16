@@ -1,0 +1,40 @@
+% -*- coding: utf-8 -*-
+\documentclass[%
+<%= documentclassoption %>
+]{thinkit-books}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage[dvipdfmx]{xcolor}[2007/01/21 v2.11]
+\usepackage[dvipdfmx]{colortbl}[2012/02/13 v1.0a]%requires array
+\usepackage{tabularx}[2014/10/28 v2.10]
+\usepackage{amsmath}[2013/01/14 v2.14]
+\usepackage{thinkit-books-local}
+
+% \includeonly{5484_Drupal}
+
+\bookcoverimage{<%= values["coverimage"] %>}
+\booktitle{<%= values["booktitle"] %>}
+\bookauthors{<%= authors %>}
+\bookdate{<%= values["date"] %>}
+\bookprt{<%= values["prt"] %>}
+
+\begin{document}
+\frontmatter
+<% if values["titlepage"] %><% if custom_titlepage %><%= custom_titlepage %><% else %><% if values["coverimage"] %>
+\makecoverimage<% end %>
+% \makebooktitle
+<% end %><% end %>
+<% if values["pre_str"] %><%= values["pre_str"] %><% end %>
+\begin{TOC}\tableofcontents\end{TOC}
+
+\mainmatter
+<%= values["chap_str"] %>
+<% if values["appendix_str"] %>
+\appendix
+<%= values["appendix_str"] %>
+<% end %>
+
+<% if values["post_str"] %>
+\backmatter
+<%= values["post_str"] %>
+<% end %>
+\end{document}
