@@ -38,4 +38,5 @@ https://github.com/suzukin/tibooks-maker/releases
 
     [tibooks-maker]:~ $
     ```
-1. tibooks-makerリポジトリをクローンしたら、 `gmake book.pdf`, `gmake book.epub` コマンドを試してみましょう。
+1. tibooks-makerリポジトリをクローンしたら、 `gmake all` コマンドを試してみましょう。
+book.epub: 電子書籍用EPUB（カラー画像）, book.pdf: 電子書籍用PDF, book-sp.pdf: 紙書籍用PDF の3点が生成されます。
