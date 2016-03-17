@@ -1,54 +1,113 @@
-@charset "utf-8";
-/* Tatujin-Publishing   */
-/* Style sheet for epub */
-/* Ver.0.8b1            */
+﻿@charset "UTF-8";
 
-/*
-Scale & Rhythm
-line-height 1.6
-16px = 1em
-x:p:h1:h2:h3 = 12px:14px:16px:24px:30px
-*/
-* {
+/* css reset
+---------------------------------------------------------------- */
+body {
+  margin:         0;
+  padding:        0;
+  font-size:      100%;
+  vertical-align: baseline;
+  line-height:    1.75;
+  background:     transparent;
+
+  word-spacing:   normal;
+  letter-spacing: normal;
+  white-space:    normal;
+  word-wrap:      break-word;
+  text-align:     justify;
+
+  -webkit-line-break: normal;
+  -epub-line-break:   normal;
+
+  -webkit-word-break: normal;
+  -epub-word-break:   normal;
+
+  -webkit-hyphens: auto;
+  -epub-hyphens:   auto;
+
+  -webkit-text-underline-position: under left;
+  -epub-text-underline-position:   under left;
 }
+div,p {
+  display: block;
+  width:   auto;
+  height:  auto;
+  margin:  0;
+  padding: 0;
+}
+body,div,p {
+  text-indent: 0;
+}
+body > p,
+div  > p {
+
+}
+h1,h2,h3,h4,h5,h6 {
+  display:     block;
+  margin:      0;
+  padding:     0;
+  font-size:   100%;
+  font-weight: inherit;
+  background:  transparent;
+}
+img {
+  width:          auto;
+  height:         auto;
+  margin:         0;
+  padding:        0;
+  border:         none;
+  vertical-align: baseline;
+  background:     transparent;
+}
+a {
+  font-style:      inherit;
+  font-weight:     inherit;
+  text-decoration: inherit;
+  color:           inherit;
+  background:      transparent;
+}
+
+/* tibooks dafalt
+---------------------------------------------------------------- */
 body {
     margin: 0;
     padding: 0;
     font-size: 1em;
     line-height:1.6;
-    font-family: "ShinGoPro-Regular","ShinGo-Regular", sans-serif;
+    font-family:serif;
     /*
     word-break: normal;
     -webkit-line-break: after-white-space;
     */
 }
 p, ul, ol, dl, pre, table {
-    font-family: "ShinGo Regular","ShinGo R","新ゴR","新ゴ R", sans-serif;
+    font-family: serif;
     font-size: 0.875em;
 }
+
 /* Heading */
 h1 {
-    margin: 0 0 3em;
-    padding: 0.5em 0 0;
-    border-top: 14px #326450 solid;
-    text-align: left;
-    font-size: 1.875em;
+    font-family: sans-serif-ja, sans-serif;
+    font-size:  1.40em;
     font-weight: bold;
+    line-height: 1.25;
+    margin:      0 0 1.5em 0;
 }
 h2 {
-    margin: 3em 0 0.5em;
-    padding: 0.5em 0 0;
-    border-top: 2px #326450 solid;
-    text-align: left;
-    font-size: 1.5em;
+    font-size:  1.20em;
+    font-family: sans-serif-ja, sans-serif;
     font-weight: bold;
+    padding-left: 0.5em;
+    border-style: none none none solid;
+    border-width: 5px;
+    border-color: #0f83b1;
+    margin:      1.5em 0 1.5em 0;
 }
 h3 {
-    margin: 3em 0 0.5em;
-    padding: 0;
-    text-align: left;
-    font-size: 1em;
+    font-size:  1.10em;
+    font-family: sans-serif-ja, sans-serif;
     font-weight: bold;
+    margin:      1.0em 0 0 0;
 }
 h4, h5, h6 {
     margin:0.7em 0;
@@ -69,6 +128,14 @@ div.lead p {
 	color: #666;
     line-height: 1.6;
     font-size: 0.75em;
+}
+/* link */
+a:link,
+a:visited,
+a:hover,
+a:focus,
+a:active {
+  color: #0000ff;
 }
 /* List */
 ul, ol {
@@ -185,9 +252,10 @@ div.image {
     padding: 0;
 }
 div.image img {
-    margin: 0 auto;
-    padding: 0;
-    display: block;
+  display:            inline-block;
+  page-break-inside:  avoid;
+  max-height:         100%;
+  max-width:          100%;
 }
 div.image p.caption {
     margin: 0 auto;
