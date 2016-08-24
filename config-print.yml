@@ -1,18 +1,20 @@
 # book-print.pdf: オフセット用PDF（グレースケール画像、印刷用リンクなし、トンボあり、デフォルトオフ）
 
-texdocumentclass: ["thinkit-books", "tombo, pdf:kanjimap=morisawa, cameraready=print, backmatter:break-before=page,"]
-#   hanmen, % draft,
-#   % hanmengrid,
-#   % tombo, % mentuke,
-#   % showremark,
-#   cameraready=pdf,%default: print; available: preview,print,pdf
-#   % paper=b5var+3.17mm,%default: b5var; available: b5var{,+3mm,+3.17mm,+4mm}
-#   %
-#   % toc:break-before=page,%default: right
-#   % backmatter:break-before=page,%default: right
-texcommand: uplatex
 pdfmaker:
-  hook_beforetexcompile: ./hook_tex.rb
+  texdocumentclass: ["thinkit-books", "tombo, pdf:kanjimap=morisawa, cameraready=print, backmatter:break-before=page,"]
+  #   hanmen, % draft,
+  #   % hanmengrid,
+  #   % tombo, % mentuke,
+  #   % showremark,
+  #   cameraready=pdf,%default: print; available: preview,print,pdf
+  #   % paper=b5var+3.17mm,%default: b5var; available: b5var{,+3mm,+3.17mm,+4mm}
+  #   %
+  #   % toc:break-before=page,%default: right
+  #   % backmatter:break-before=page,%default: right
+  texcommand: uplatex
+  hook_beforetexcompile: ../hook_beforetex.rb
+  # hook_aftertexcompile: null
+  ## end of pdfmaker
 
 # ブック名(ファイル名になるもの。ASCII範囲の文字を使用)
 bookname: book-print
@@ -189,5 +191,4 @@ coverimage: cover.jpg
 # fontdir内から取り込まれる対象となるファイル拡張子。省略した場合は以下
 # font_ext: ["ttf", "woff", "otf"]
 
-# texstyle: reviewmacro
 debug: true
