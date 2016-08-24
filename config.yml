@@ -1,18 +1,20 @@
 # book.epub: 電子書籍用EPUB（カラー画像）, book.pdf: 電子書籍用PDF（カラー画像、閲覧用リンクあり、仕上がりサイズ）
 
-texdocumentclass: ["thinkit-books", "pdf:kanjimap=ipaex, cameraready=pdf, backmatter:break-before=page,"]
-#   hanmen, % draft,
-#   % hanmengrid,
-#   % tombo, % mentuke,
-#   % showremark,
-#   cameraready=pdf,%default: print; available: preview,print,pdf
-#   % paper=b5var+3.17mm,%default: b5var; available: b5var{,+3mm,+3.17mm,+4mm}
-#   %
-#   % toc:break-before=page,%default: right
-#   % backmatter:break-before=page,%default: right
-texcommand: uplatex
 pdfmaker:
-  hook_beforetexcompile: ./hook_tex.rb
+  texdocumentclass: ["thinkit-books", "pdf:kanjimap=ipaex, cameraready=pdf, backmatter:break-before=page,"]
+  #   hanmen, % draft,
+  #   % hanmengrid,
+  #   % tombo, % mentuke,
+  #   % showremark,
+  #   cameraready=pdf,%default: print; available: preview,print,pdf
+  #   % paper=b5var+3.17mm,%default: b5var; available: b5var{,+3mm,+3.17mm,+4mm}
+  #   %
+  #   % toc:break-before=page,%default: right
+  #   % backmatter:break-before=page,%default: right
+  texcommand: uplatex
+  hook_beforetexcompile: ../hook_tex.rb
+  # hook_aftertexcompile: null
+  ## end of pdfmaker
 
 # ブック名(ファイル名になるもの。ASCII範囲の文字を使用)
 bookname: book
@@ -191,5 +193,4 @@ direction: ltr
 # fontdir内から取り込まれる対象となるファイル拡張子。省略した場合は以下
 # font_ext: ["ttf", "woff", "otf"]
 
-# texstyle: reviewmacro
 debug: true
