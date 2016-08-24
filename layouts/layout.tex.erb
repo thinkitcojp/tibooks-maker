@@ -1,36 +1,36 @@
 % -*- coding: utf-8 -*-
 \documentclass[dvipdfmx,%
-<%= documentclassoption %>
-]{<%= documentclass %>}
-\usepackage{<%= documentclass %>-local}
+<%= @documentclassoption %>
+]{<%= @documentclass %>}
+\usepackage{<%= @documentclass %>-local}
 
-\bookcoverimage{<%= values["coverimage"] %>}
-\booktitle{<%= values["booktitle"] %>}
-\bookauthors{<%= authors %>}
-\bookdate{<%= values["date"] %>}
-\bookprt{<%= values["prt"] %>}
+\bookcoverimage{<%= @config["coverimage"] %>}
+\booktitle{<%= @config["booktitle"] %>}
+\bookauthors{<%= @authors %>}
+\bookdate{<%= @config["date"] %>}
+\bookprt{<%= @config["prt"] %>}
 
 \begin{document}
 \frontmatter
-<% if values["titlepage"] %><% if custom_titlepage %><%= custom_titlepage %><% else %><% if values["coverimage"] %>
+<% if @config["titlepage"] %><% if @custom_titlepage %><%= @custom_titlepage %><% else %><% if @config["coverimage"] %>
 \makecoverimage<% end %>
 % \makebooktitle
 <% end %><% end %>
-<% if values["pre_str"] %><%= values["pre_str"] %><% end %>
-<% if values["toc"] %>
-\setcounter{tocdepth}{<%= values["toclevel"] %>}
+<% if @config["pre_str"] %><%= @config["pre_str"] %><% end %>
+<% if @config["toc"] %>
+\setcounter{tocdepth}{<%= @config["toclevel"] %>}
 \begin{TOC}\tableofcontents\end{TOC}
 <% end %>
 
 \mainmatter
-<%= values["chap_str"] %>
-<% if values["appendix_str"] %>
+<%= @input_files["CHAPS"] %>
+<% if @input_files["APPENDIX"] %>
 \appendix
-<%= values["appendix_str"] %>
+<%= @input_files["APPENDIX"] %>
 <% end %>
 
-<% if values["post_str"] %>
+<%- if @input_files["POSTDEF"] -%>
 \backmatter
-<%= values["post_str"] %>
+<%= @input_files["POSTDEF"] %>
 <% end %>
 \end{document}
