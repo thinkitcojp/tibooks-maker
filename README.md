@@ -9,7 +9,7 @@ customized Re:VIEW-platform for [Think IT Books](https://thinkit.co.jp/tibooks,T
   * uplatex
   * dvipdfmx
 
- Copyright ©2015 Impress Corporation, An Impress Group Company. All rights reserved.<br>
+ Copyright ©2015, 2016 Impress Corporation, An Impress Group Company. All rights reserved.<br>
  special thanks Munehiro Yamamoto (Green Cherry Ltd.)
 
 ## Installing
@@ -20,21 +20,21 @@ https://github.com/suzukin/tibooks-maker/releases
 
 ## Getting Started
 
-1. `tibooks-maker-1.x.dmg` を開き `tibooks-maker` フォルダを `/Applications/` フォルダへコピーします。
+1. `tibooks-maker-X.Y.Z-YYYYMMDD.dmg` を開き `tibooks-maker` フォルダを `/Applications/` フォルダへコピーします。
 1. ターミナル `Terminal.app` を起動して、
    `. /Applications/tibooks-maker/setup.sh` を実行すると、プロンプトが、
    `tibooks-maker` 環境に切り替わります。
     ```bash
     $ . /Applications/tibooks-maker/setup.sh
 
-		tibook-maker 1.1 (Cherry)
+		tibook-maker 2.0.0-20160824 (Durian)
 
-		This is constructed from the following components:
-		 * Re:VIEW:	review (1.7.2)
-		 * Ruby:	ruby 2.3.0p0 (2015-12-25 revision 53290) [x86_64-darwin15]
-		 * TeX Live
-		   * uplatex:	e-upTeX 3.14159265-p3.6-u1.20-141210-2.6 (utf8.uptex) (TeX Live 2015)
-		   * dvipdfmx:	dvipdfmx Version 20150315
+        This is constructed from the following components:
+         * Re:VIEW:	review (2.0.0)
+         * Ruby:	ruby 2.3.1p112 (2016-04-26 revision 54768) [x86_64-darwin15]
+         * TeX Live
+           * uplatex:	e-upTeX 3.14159265-p3.6-u1.20-141210-2.6 (utf8.uptex) (TeX Live 2015)
+           * dvipdfmx:	dvipdfmx Version 20150315 
 
     [tibooks-maker]:~ $
     ```
