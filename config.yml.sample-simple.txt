@@ -1,3 +1,5 @@
+## book.epub: 電子書籍用EPUB（カラー画像）, book.pdf: 電子書籍用PDF（カラー画像、閲覧用リンクあり、仕上がりサイズ）
+
 # simple sample of config.yml
 review_version: 2.0
 
@@ -12,37 +14,36 @@ debug: true
 
 bookname: book
 language: ja
-booktitle: The Re:VIEW Sample Book
-aut: ["Masayoshi Takahashi"]
+booktitle: ★★★書名★★★（Think IT Books）
+aut: ["★★★著者名★★★"]
 # cov: ["Masayoshi Takahashi"]
 # ill: ["Masayoshi Takahashi"]
 # trl: null
 # edt: null
-pbl: "Re:VIEW Publishing inc."
-prt: "Re:VIEW Printing inc."
-date: 2016-05-03
-history: [["2012-01-30"],["2016-04-20","2016-05-03"]]
-rights: (C) 2016 Re:VIEW Commiters, some rights reserved.
-description: sample config.yml file for Re:VIEW book
-urnid: urn:uid:http://reviewml.org/review-sample-book
+pbl: "株式会社インプレス"
+# prt: "Re:VIEW Printing inc."
+date: 201★-★★-★★
+history: [["201★-★★-★★"]]
+rights: (C) 2016 ★★★権利者名★★★, all rights reserved.
+description: template config.yml file for Think IT Books series
+urnid: urn:uid:https://thinkit.co.jp/tibooks
 # isbn: null
 
 ## Book Structure
 
 toclevel: 3
 secnolevel: 2
-toc: true
 direction: "ltr"
 
 ## Extra Pages
 
 cover: null
-coverimage: sample.jpg
+coverimage: cover.jpg
 # titlepage: null
 # titlefile: null
 # originaltitlefile: null
 # creditfile: null
-colophon: true
+colophon: null
 # backcover: null
 # profile: null
 # profiletitle: "About Authors"
@@ -62,6 +63,7 @@ stylesheet: ["style.css"]
 ## for EPUB
 
 epubmaker:
+  toc: null
   htmlext: xhtml
   cover_linear: true
   externallink: true
@@ -74,4 +76,18 @@ texdocumentclass: ["jsbook", "uplatex,oneside"]
 ## for PDFMaker
 
 pdfmaker:
-  colophon: true
+  toc: true
+  texdocumentclass: ["thinkit-books", "pdf:kanjimap=ipaex, cameraready=pdf, backmatter:break-before=page,"]
+  #   hanmen, % draft,
+  #   % hanmengrid,
+  #   % tombo, % mentuke,
+  #   % showremark,
+  #   cameraready=pdf,%default: print; available: preview,print,pdf
+  #   % paper=b5var+3.17mm,%default: b5var; available: b5var{,+3mm,+3.17mm,+4mm}
+  #   %
+  #   % toc:break-before=page,%default: right
+  #   % backmatter:break-before=page,%default: right
+  texcommand: uplatex
+  hook_beforetexcompile: ../hook_beforetex.rb
+  # hook_aftertexcompile: null
+  ## end of pdfmaker
