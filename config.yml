@@ -52,8 +52,8 @@ colophon: null
 ## Syntax Highlighting
 
 highlight:
-  html: "pygments"
-  latex: "listings"
+#  html: "pygments"
+#  latex: "listings"
 
 ## for HTML
 
