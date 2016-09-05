@@ -1,7 +1,7 @@
 # book.epub: 電子書籍用EPUB（カラー画像）, book.pdf: 電子書籍用PDF（カラー画像、閲覧用リンクあり、仕上がりサイズ）
 
 pdfmaker:
-  texdocumentclass: ["thinkit-books", "pdf:kanjimap=ipaex, cameraready=pdf, backmatter:break-before=page,"]
+  texdocumentclass: ["thinkit-books", "pdf:kanjimap=hiragino, cameraready=pdf, backmatter:break-before=page,"]
   #   hanmen, % draft,
   #   % hanmengrid,
   #   % tombo, % mentuke,
