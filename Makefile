@@ -30,7 +30,8 @@ images-tmpGrayscale:
 	test ! -d images-tmpGrayscale
 	echo Converting all images to grayscale ...
 	cp -a images images-tmpGrayscale
-	mogrify -type Grayscale images/*.* && echo done. || /bin/false; \
+	mogrify -type Grayscale images/*.*
+	echo done.
 
 clean-images-tmpGrayscale:
 	test -d images-tmpGrayscale
