@@ -68,11 +68,6 @@ epubmaker:
   cover_linear: true
   externallink: true
 
-## for LaTeX
-
-texstyle: reviewmacro
-texdocumentclass: ["jsbook", "uplatex,oneside"]
-
 ## for PDFMaker
 
 pdfmaker:
