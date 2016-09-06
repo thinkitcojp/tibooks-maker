@@ -77,7 +77,7 @@ texdocumentclass: ["jsbook", "uplatex,oneside"]
 
 pdfmaker:
   toc: true
-  texdocumentclass: ["thinkit-books", "pdf:kanjimap=ipaex, cameraready=pdf, backmatter:break-before=page,"]
+  texdocumentclass: ["thinkit-books", "pdf:kanjimap=hiragino, cameraready=pdf, backmatter:break-before=page,"]
   #   hanmen, % draft,
   #   % hanmengrid,
   #   % tombo, % mentuke,
