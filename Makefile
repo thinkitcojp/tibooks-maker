@@ -16,15 +16,15 @@ book.pdf: config.yml
 
 # book-sp.pdf: 京葉SPおよびAmazonPOD用PDF（グレースケール画像、印刷用リンクなし、仕上がりサイズ）
 book-sp.pdf: config-sp.yml
-	make images-tmpGrayscale
+	gmake images-tmpGrayscale
 	${__pdfmaker} $<
-	make clean-images-tmpGrayscale
+	gmake clean-images-tmpGrayscale
 
 # book-print.pdf: オフセット用PDF（グレースケール画像、印刷用リンクなし、トンボあり、デフォルトオフ）
 book-print.pdf: config-print.yml
-	make images-tmpGrayscale
+	gmake images-tmpGrayscale
 	${__pdfmaker} $<
-	make clean-images-tmpGrayscale
+	gmake clean-images-tmpGrayscale
 
 images-tmpGrayscale:
 	test ! -d images-tmpGrayscale
