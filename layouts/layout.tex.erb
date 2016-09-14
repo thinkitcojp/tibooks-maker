@@ -16,7 +16,7 @@
 \makecoverimage<% end %>
 % \makebooktitle
 <% end %><% end %>
-<% if @config["pre_str"] %><%= @config["pre_str"] %><% end %>
+<%= @input_files["PREDEF"] %>
 <% if @config["toc"] %>
 \setcounter{tocdepth}{<%= @config["toclevel"] %>}
 \begin{TOC}\tableofcontents\end{TOC}
