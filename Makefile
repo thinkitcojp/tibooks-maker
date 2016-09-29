@@ -30,7 +30,7 @@ images-tmpGrayscale:
 	test ! -d images-tmpGrayscale
 	echo Converting all images to grayscale ...
 	cp -a images images-tmpGrayscale
-	mogrify -type Grayscale images/*.*
+	find images/ -name "*.jpg" -o -name "*.png" | xargs sips -m "/System/Library/ColorSync/Profiles/Generic Gray Profile.icc"
 	echo done.
 
 clean-images-tmpGrayscale:
