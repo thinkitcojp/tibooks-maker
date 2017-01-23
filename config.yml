@@ -63,7 +63,7 @@ stylesheet: ["style.css"]
 ## for EPUB
 
 epubmaker:
-  toc: null
+  toc: true
   htmlext: xhtml
   cover_linear: true
   externallink: true
