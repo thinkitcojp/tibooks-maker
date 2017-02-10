@@ -9,14 +9,14 @@ customized Re:VIEW-platform for [Think IT Books](https://thinkit.co.jp/tibooks,T
   * uplatex
   * dvipdfmx
 
- Copyright ©2015, 2016 Impress Corporation, An Impress Group Company. All rights reserved.<br>
+ Copyright ©2015-2017 Impress Corporation, An Impress Group Company. All rights reserved.<br>
  special thanks Munehiro Yamamoto (Green Cherry Ltd.)
 
 ## Installing
 
 Download the latest Version.
 
-https://github.com/suzukin/tibooks-maker/releases
+https://github.com/thinkitcojp/tibooks-maker/releases
 
 ## Getting Started
 
