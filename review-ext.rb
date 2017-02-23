@@ -7,18 +7,6 @@ module ReVIEW
     end
   end
 
-  class Builder
-    def tsize(str)
-      if matched = str.match(/\A\|(.*?)\|(.*)/)
-        builders = matched[1].split(/,/).map{|i| i.gsub(/\s/, '') }
-        c = self.class.to_s.gsub(/ReVIEW::/, '').gsub(/Builder/, '').downcase
-        if builders.include?(c)
-          @tsize = matched[2]
-        end
-      end
-    end
-  end
-
   class LATEXBuilder
     def dt(str)
       str.sub!(/\[/){'\lbrack{}'}
@@ -72,11 +60,6 @@ module ReVIEW
       blank
     end
 
-    def tsize(str)
-      # @tsize = str
-      super(str)
-    end
-
     def table_header(id, caption)
       if caption.present?
         @table_caption = true
@@ -88,9 +71,9 @@ module ReVIEW
 
     def th(s)
       if  /\\\\/i =~ s
-        macro('reviewth', macro('shortstack[l]', s))
-        # array = s.split("\\\\")
-        # macro('reviewth', array.join('\ccr '))
+        # macro('reviewth', macro('shortstack[l]', s))
+        array = s.split("\\\\")
+        macro('reviewth', array.join('\ccr '))
       else
         macro('reviewth', s)
       end
@@ -98,9 +81,9 @@ module ReVIEW
 
     def td(s)
       if  /\\\\/ =~ s
-        macro('shortstack[l]', s)
-        # array = s.split("\\\\")
-        # array.join('\ccr ')
+        # macro('shortstack[l]', s)
+        array = s.split("\\\\")
+        array.join('\ccr ')
       else
         s
       end
@@ -125,6 +108,25 @@ module ReVIEW
       puts macro('label', image_label(id))
       puts '\end{reviewimage}'
     end
+
+    def indepimage(id, caption=nil, metric=nil)
+      metrics = parse_metric("latex", metric)
+      puts '\begin{reviewimage}'
+      if metrics.present?
+        puts "\\includekeepaspectratiographics[#{metrics}]{#{@chapter.image(id).path}}"
+      else
+        puts "\\includekeepaspectratiographics{#{@chapter.image(id).path}}"
+      end
+      if caption.present?
+        puts macro('reviewindepimagecaption',
+                   %Q[#{I18n.t("numberless_image")}#{I18n.t("caption_prefix")}#{compile_inline(caption)}])
+      end
+      puts '\end{reviewimage}'
+    end
+
+    # def index(str)
+    #   '\index{' + escape_index(text(str)).gsub("＠", "@") + '}'
+    # end
 
   end
 
