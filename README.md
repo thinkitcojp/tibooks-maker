@@ -1,6 +1,6 @@
 # What's this?
 "tibooks-maker" is easy publishing for pBooks & eBooks.
-customized Re:VIEW-platform for [Think IT Books](https://thinkit.co.jp/tibooks, Think IT Books)
+customized Re:VIEW-platform for [Think IT Books](https://thinkit.co.jp/tibooks)
 
 * tibooks-maker is OS X apps (all in one package) constructed from the following components:
  * Re:VIEW
