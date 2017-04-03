@@ -16,7 +16,7 @@ customized Re:VIEW-platform for [Think IT Books](https://thinkit.co.jp/tibooks)
 
 Download the latest Version.
 
-https://github.com/thinkitcojp/tibooks-maker/releases
+[https://github.com/thinkitcojp/tibooks-maker/releases](https://github.com/thinkitcojp/tibooks-maker/releases)
 
 ## Getting Started
 
@@ -39,4 +39,4 @@ https://github.com/thinkitcojp/tibooks-maker/releases
     [tibooks-maker]:~ $
     ```
 1. tibooks-makerリポジトリをクローンしたら、 `gmake all` コマンドを試してみましょう。
-book.epub: 電子書籍用EPUB（カラー画像）, book.pdf: 電子書籍用PDF, book-sp.pdf: 紙書籍用PDF の3点が生成されます。
+book.epub: 電子書籍用EPUB（カラー画像）, book.pdf: 電子書籍用PDF, book-sp.pdf: 紙書籍用PDFの3点が生成されます。
