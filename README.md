@@ -1,6 +1,6 @@
 # What's this?
 "tibooks-maker" is easy publishing for pBooks & eBooks.
-customized Re:VIEW-platform for [Think IT Books](https://thinkit.co.jp/tibooks,Think IT Books)
+customized Re:VIEW-platform for [Think IT Books](https://thinkit.co.jp/tibooks, Think IT Books)
 
 * tibooks-maker is OS X apps (all in one package) constructed from the following components:
  * Re:VIEW
@@ -27,11 +27,11 @@ https://github.com/thinkitcojp/tibooks-maker/releases
     ```bash
     $ . /Applications/tibooks-maker/setup.sh
 
-		tibook-maker 2.0.0-20160824 (Durian)
+		tibook-maker 2.2.0-20170305 (Durian)
 
         This is constructed from the following components:
-         * Re:VIEW:	review (2.0.0)
-         * Ruby:	ruby 2.3.1p112 (2016-04-26 revision 54768) [x86_64-darwin15]
+         * Re:VIEW:	review (2.2.0)
+         * Ruby:	ruby 2.3.3p222 (2016-11-21 revision 56859) [x86_64-darwin10.0]
          * TeX Live
            * uplatex:	e-upTeX 3.14159265-p3.6-u1.20-141210-2.6 (utf8.uptex) (TeX Live 2015)
            * dvipdfmx:	dvipdfmx Version 20150315 
