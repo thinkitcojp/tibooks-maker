@@ -5,7 +5,7 @@ inherit: ["config.yml"]
 bookname: book-sp
 
 pdfmaker:
-  texdocumentclass: ["thinkit-books", "pdf:kanjimap=hiragino, cameraready=print, backmatter:break-before=page,"]
+  texdocumentclass: ["thinkit-books", "pdf:kanjimap=hiragino, cameraready=print, paper=b5var+3mm, backmatter:break-before=page,"]
   #   hanmen, % draft,
   #   % hanmengrid,
   #   % tombo, % mentuke,
