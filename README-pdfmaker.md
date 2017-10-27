@@ -39,24 +39,41 @@ thinkit-books v2.1 において利用可能な主なクラスオプションは�
 ツメ有りのときの章総数を指定します。
 
 * chapter:total-number=6: 章総数を指定する（例：第6章まである場合、6）
+* appendixchapter:total-number=3: 章総数を指定する（例：付録Cまである場合、3）
 
 ### PDF埋込フォントプロファイル
 
-PDF埋込フォントプロファイルを指定します（後述のPDFデータ作成形式 `cameraready` 参照）。
+## pdf:kanjimap=preview,% default: preview; available: preview,release に変更
 
-* pdf:kanjimap=ipaex: PDF埋込するフォントを上書き指定する（例：フリーフォント）
-  * default: hiragino（OS X 10.11 El Capitan同梱ヒラギノフォント）
-  * hiragino-legacy（OS X 10.10 Yosemite 以前同梱ヒラギノフォント）
-  * morisawa（MORISAWA PASSPORTが必要）
-  * ipaex（フリーフォント）
+PDF埋込フォントプロファイルを指定します（後述のPDFデータ作成形式 `cameraready` 参照）。
+thinkitcls のLaTeXクラスファイルオプション pdf:kanjimap に対して、以下の値が利用できます。
+
+* pdf:kanjimap=preview: PDF埋込するフォントを上書き指定する（例：源ノ明朝、源ノ角ゴシック）
+   * preview: プレビュー用（源ノ明朝、源ノ角ゴシックで代替）
+   * release: 製品リリース用（主にMORISAWA PASSPORT）
+
+これまで利用していたpdf:kanjimapに与える値は、
+PDFに埋め込む和文フォントプロファイルとして、以下の値を指定していました。
+
+ * ipaex: フリーフォント（IPAex、Mig, Mogaなど）
+ * hiragino, hiragino-legacy: Mac OS Xに同梱されているヒラギノフォント
+ * morisawa: MORISAWA PASSPORT
+
+今回 tibooks-maker-2.3.0 の更新において、
+これらの値 ipaex, hiragino, hiragino-legacy, morisawa は、下位互換のために保持し、
+以下のような動作をします。
+
+ * ipaex, hiragino, hiragino-legacy: preview と同等
+ * morisawa: release と同等
+
 
 ### PDFデータ作成形式
 
 印刷用 `print`、閲覧用 `pdf`、プレビュー用 `preview` のいずれかの形式を指定します。
 
 * cameraready=pdf: データ作成形式を指定する（例：閲覧用PDF）
-  * preview: デフォルトで ipaex（フリーフォント）を埋め込む
-  * print, pdf: デフォルトで hiragino（OS X El Capitan同梱ヒラギノフォント）を埋め込む
+  * preview: デフォルトで preview（源ノ明朝、源ノ角ゴシック）を埋め込む
+  * print, pdf: デフォルトで preview（源ノ明朝、源ノ角ゴシック）を埋め込む
   * default: print; preview, pdf
 
 ### 用紙サイズ
@@ -180,4 +197,5 @@ tableタグの直前にtsizeで指定します、列数と合わせるように�
 ```
 //tsize[|latex|20,45,75]
 //table[table01][]{
+}
 ```
