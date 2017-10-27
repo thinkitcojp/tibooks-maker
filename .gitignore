@@ -1,0 +1,10 @@
+.DS_Store
+
+.bundle/
+vendor/
+Gemfile.lock
+
+book-epub/
+book-pdf/
+book.epub
+book.pdf
