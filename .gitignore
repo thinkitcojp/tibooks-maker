@@ -1,8 +1,17 @@
 .DS_Store
+*~
+*.bak
+*.aux
+*.log
+*.dvi
+*.ps
+*.tar.xz
 
 .bundle/
 vendor/
 Gemfile.lock
+
+sty/texmf-thinkitcls.d/
 
 book-epub/
 book-pdf/
