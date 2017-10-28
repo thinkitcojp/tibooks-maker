@@ -1,0 +1,10 @@
+.DS_Store
+*~
+*.bak
+
+.bundle/
+vendor/
+
+book*.pdf
+book*.epub
+book-*/
