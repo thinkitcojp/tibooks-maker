@@ -20,23 +20,10 @@ Download the latest Version.
 
 ## Getting Started
 
-1. `tibooks-maker-X.Y.Z-YYYYMMDD.dmg` を開き `tibooks-maker` フォルダを `/Applications/` フォルダへコピーします。
-1. ターミナル `Terminal.app` を起動して、
-   `. /Applications/tibooks-maker/setup.sh` を実行すると、プロンプトが、
-   `tibooks-maker` 環境に切り替わります。
-    ```bash
-    $ . /Applications/tibooks-maker/setup.sh
-
-		tibook-maker 2.2.0-20170305 (Durian)
-
-        This is constructed from the following components:
-         * Re:VIEW:	review (2.2.0)
-         * Ruby:	ruby 2.3.3p222 (2016-11-21 revision 56859) [x86_64-darwin10.0]
-         * TeX Live
-           * uplatex:	e-upTeX 3.14159265-p3.6-u1.20-141210-2.6 (utf8.uptex) (TeX Live 2015)
-           * dvipdfmx:	dvipdfmx Version 20150315 
-
-    [tibooks-maker]:~ $
-    ```
+1. `tibooks-maker-X.Y.Z-YYYYMMDD.dmg`を開き、`tibooks-maker.app`を`/Applications/`フォルダへインストールします。
+1. `tibooks-maker.app`をダブルクリックしてRe:VIEW製作フォルダを開くと、`[tibooks-maker]` 環境のターミナル `Terminal.app` が起動します。
+    * `tibooks-maker.app`にRe:VIEW製作フォルダ（ファイル）をドラッグ＆ドロップすることもできます。
+    * ターミナル上で `$ open -a tibooks-maker -- Re:VIEW製作フォルダ`を実行してもかまいません。
+    * 旧版のように `$ . /Applications/tibooks-maker.app/setup.sh`を実行して、`[tibooks-maker]` 環境に移ることもできます。
 1. tibooks-makerリポジトリをクローンしたら、 `gmake all` コマンドを試してみましょう。
 book.epub: 電子書籍用EPUB（カラー画像）, book.pdf: 電子書籍用PDF, book-sp.pdf: 紙書籍用PDFの3点が生成されます。
