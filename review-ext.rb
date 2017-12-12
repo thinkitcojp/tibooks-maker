@@ -111,7 +111,7 @@ module ReVIEW
 
     def indepimage(id, caption=nil, metric=nil)
       metrics = parse_metric("latex", metric)
-      puts '\begin{reviewimage}'
+      puts '\begin{reviewindepimage}'
       if metrics.present?
         puts "\\includekeepaspectratiographics[#{metrics}]{#{@chapter.image(id).path}}"
       else
@@ -121,7 +121,7 @@ module ReVIEW
         puts macro('reviewindepimagecaption',
                    %Q[#{I18n.t("numberless_image")}#{I18n.t("caption_prefix")}#{compile_inline(caption)}])
       end
-      puts '\end{reviewimage}'
+      puts '\end{reviewindepimage}'
     end
 
     # def index(str)
