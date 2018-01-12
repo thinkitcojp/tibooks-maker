@@ -16,6 +16,7 @@ pdfmaker:
   #   % toc:break-before=page,%default: right
   #   % backmatter:break-before=page,%default: right
   texcommand: uplatex
+  dvioptions: "-z 3"
   hook_beforetexcompile: ./hook_beforetex.rb
   # hook_aftertexcompile: null
   ## end of pdfmaker
