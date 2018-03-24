@@ -8,12 +8,18 @@ all: ${OBJS}
 
 # book.epub: 電子書籍用EPUB（カラー画像）
 book.epub: config.yml
+##数式の画像化
+	which pdfcrop 2>&1 >/dev/null
+	which magick 2>&1 >/dev/null
+##syntax highlighting via Rouge
+	which rougify 2>&1 >/dev/null
+
 	test -L images && rm -f images ||:
 	test -d images-epub && ln -s images-epub images
 	${__epubmaker} $<
 	test -L images && rm -f images ||:
 
-# book.pdf: 電子書籍用PDF（カラー画像、閲覧用リンクあり、仕上がりサイズ）
+# book.pdf: プレビュー電子書籍用PDF（カラー画像、閲覧用リンクあり、仕上がりサイズ）
 book.pdf: config.yml
 	test -L images && rm -f images ||:
 	test -d images-pdf && ln -s images-pdf images
