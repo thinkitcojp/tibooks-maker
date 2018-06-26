@@ -5,18 +5,5 @@ inherit: ["config.yml"]
 bookname: book-sp
 
 pdfmaker:
-  texdocumentclass: ["thinkit-books", "pdf:kanjimap=hiragino, cameraready=print, paper=b5var+3mm, backmatter:break-before=page,"]
-  #   hanmen, % draft,
-  #   % hanmengrid,
-  #   % tombo, % mentuke,
-  #   % showremark,
-  #   cameraready=pdf,%default: print; available: preview,print,pdf
-  #   % paper=b5var+3.17mm,%default: b5var; available: b5var{,+3mm,+3.17mm,+4mm}
-  #   %
-  #   % toc:break-before=page,%default: right
-  #   % backmatter:break-before=page,%default: right
-  texcommand: uplatex
-  dvioptions: "-z 3"
-  hook_beforetexcompile: ./hook_beforetex.rb
-  # hook_aftertexcompile: null
-  ## end of pdfmaker
+  # coverimage: tobira.pdf
+  texdocumentclass: ["thinkit-books", "pdf:kanjimap=release, cameraready=print, backmatter:break-before=page,"]
