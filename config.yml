@@ -1,4 +1,4 @@
-# book.epub: 電子書籍用EPUB（カラー画像）, book.pdf: 電子書籍用PDF（カラー画像、閲覧用リンクあり、仕上がりサイズ）
+# book.epub: 電子書籍用EPUB（カラー画像）, book.pdf: プレビュー電子書籍用PDF（カラー画像、閲覧用リンクあり、仕上がりサイズ）
 
 # simple sample of config.yml
 review_version: 2.0
@@ -52,7 +52,7 @@ colophon: null
 ## Syntax Highlighting
 
 highlight:
-#  html: "pygments"
+  html: "rouge"
 #  latex: "listings"
 
 ## for HTML
@@ -63,16 +63,19 @@ stylesheet: ["style.css"]
 ## for EPUB
 
 epubmaker:
+  # coverimage: tobira-1.png
   toc: true
   htmlext: xhtml
   cover_linear: true
   externallink: true
+  imgmath: true
 
 ## for PDFMaker
 
 pdfmaker:
-  toc: true
-  texdocumentclass: ["thinkit-books", "pdf:kanjimap=hiragino, cameraready=pdf, backmatter:break-before=page,"]
+  coverimage: cover.pdf
+  # coverimage: tobira-1.pdf
+  texdocumentclass: ["thinkit-books", "pdf:kanjimap=preview, cameraready=pdf, backmatter:break-before=page,"]
   #   hanmen, % draft,
   #   % hanmengrid,
   #   % tombo, % mentuke,
@@ -82,8 +85,13 @@ pdfmaker:
   #   %
   #   % toc:break-before=page,%default: right
   #   % backmatter:break-before=page,%default: right
+  toc: true
+  makeindex: true
+  # makeindex_dic: book_project.dic
+  # makeindex_sty: book_project.ist
+  makeindex_mecab: null
   texcommand: uplatex
-  dvioptions: "-z 3"
+  dvioptions: "-d 5 -z 3"
   hook_beforetexcompile: ./hook_beforetex.rb
-  # hook_aftertexcompile: null
+  # hook_aftertexcompile: ./hook_aftertex.rb
   ## end of pdfmaker
