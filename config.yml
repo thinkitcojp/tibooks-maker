@@ -86,7 +86,7 @@ pdfmaker:
   #   % toc:break-before=page,%default: right
   #   % backmatter:break-before=page,%default: right
   toc: true
-  makeindex: true
+  # makeindex: true
   # makeindex_dic: book_project.dic
   # makeindex_sty: book_project.ist
   makeindex_mecab: null
