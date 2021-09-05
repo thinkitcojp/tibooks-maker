@@ -1,3 +1,11 @@
+# tibooks-maker: OBSOLETE
+
+This repository is obsolete.
+We recommend you to try other workflow instead like [vvakame/docker-review: Re:VIEW build container by docker](https://github.com/vvakame/docker-review).
+Therefore, please DO NOT open issues, fork or send pull request to this repository.
+
+---------------------------------
+
 # What's this?
 "tibooks-maker" is easy publishing for pBooks & eBooks.
 customized Re:VIEW-platform for [Think IT Books](https://thinkit.co.jp/tibooks)
