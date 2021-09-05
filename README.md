@@ -4,6 +4,11 @@ This repository is obsolete.
 We recommend you to try other workflow instead like [vvakame/docker-review: Re:VIEW build container by docker](https://github.com/vvakame/docker-review).
 Therefore, please DO NOT open issues, fork or send pull request to this repository.
 
+tibooks-makerの提供は終了いたしました。
+DockerコンテナによるRe:VIEW文章のビルドなどへ移行されることを推奨いたします。
+したがいまして、本リポジトリのissueやfork、pull requestをお控えいただきますよう、お願いいたします。
+
+
 ---------------------------------
 
 # What's this?
